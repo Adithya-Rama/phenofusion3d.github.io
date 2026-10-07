@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const links = [
   ["/", "Home"],
+  ["/results/final-sprint-20260928/", "Five-plant final sprint"],
   ["/results/experimental/", "Experimental Results"],
   ["/results/manual-validation/", "Manual Validation"],
   ["/results/coleus-109/", "Coleus 109"],

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Leaf } from "lucide-react";
 
 const navLinks = [
+  { href: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/results/final-sprint-20260928/`, label: "Five plants" },
   { href: "#about", label: "About" },
   { href: "#features", label: "Features" },
   { href: "#pipeline", label: "Pipeline" },
@@ -58,7 +59,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop links */}
-          <div className="hidden xl:flex items-center gap-1">
+          <div className="hidden 2xl:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -78,7 +79,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="xl:hidden p-2 text-green-300 hover:bg-green-900/20 rounded-lg transition"
+            className="2xl:hidden p-2 text-green-300 hover:bg-green-900/20 rounded-lg transition"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={menuOpen}
@@ -96,7 +97,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed top-16 left-0 right-0 z-40 bg-[#0a1510]/95 backdrop-blur-xl border-b border-green-900/40 px-6 py-4 flex flex-col gap-2 xl:hidden"
+            className="fixed top-16 left-0 right-0 z-40 bg-[#0a1510]/95 backdrop-blur-xl border-b border-green-900/40 px-6 py-4 flex flex-col gap-2 2xl:hidden"
           >
             {navLinks.map((link) => (
               <a
